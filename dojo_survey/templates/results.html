@@ -1,0 +1,27 @@
+<html>
+    <head>
+       <title>Dojos New</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results_css.css')}}">
+    </head>
+    <body>
+    <div id="wrapper">
+        <form action='/'>
+            <label>Your Name:</label>
+            <div>{{name}}</div>
+            <br>
+            <label>Dojo Location:</label>
+            <div>{{dojo_location}}</div>
+            <br>
+			<label> Favorite Language:</label>
+            <div>{{favorite_language}}</div>
+            <br>
+            <label>Comment:</label>
+            <div>{{comment}}</div>
+            <br>
+            <label>
+                <input type='submit' id="button" value='Go Back!'>
+            </label>
+        </form>
+    </div>
+    </body>
+</html

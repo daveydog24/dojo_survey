@@ -1,0 +1,51 @@
+<html>
+    <head>
+       <title>Dojos New</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_css.css')}}">
+    </head>
+    <body>
+    <div id="wrapper">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+    	    {% for message in messages %}
+      		    <p>{{message}}</p>
+    	    {% endfor %}
+  	    {% endif %}
+	    {% endwith %}
+        <form action= '/result'  method='post'>
+            <label>
+                Your Name: <input type='text' name='name'>
+            </label>
+            <label>
+                Dojo Location: 
+                <select name='dojo_location' id="dojo_location">
+                    <option value="Silicon Valley">Silicon Valley</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angelos">Los Angelos</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Washington D.C.">Washington D.C.</option>
+                </select>
+            </label>
+			<label>
+                Favorite Language:
+                <select name="favorite_language" id="favorite_language">
+                    <option value=".NET/C#">.NET/C#</option>
+                    <option value="Ruby">Ruby on Rails</option>
+                    <option value="Python">Python</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="Java">Java</option>
+                    <option value="IOS">IOS Swift</option>
+                </select>
+            </label>
+            <label>
+                Comment (optional): <textarea name="comment"></textarea>
+            </label>
+            <label>
+                <input type='submit' id="button" name='button' value=Button>
+            </label>
+        </form>
+    </div>
+    </body>
+</html
